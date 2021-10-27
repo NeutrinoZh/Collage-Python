@@ -16,5 +16,9 @@ class Department:
     teachers = []
     courses = []
 
-student = Student('Zhenya', 'Tertychniy', 16, 'CHSBC', 2020, 100)
+departament = Department()
+departament.title = '...'
+departament.teachers = [ Teacher('Bob', 'Bob', 5) ]
+
+student = Student('Zhenya', 'Tertychniy', 16, 'CHSBC', 2020, 100, departament)
 print(student)

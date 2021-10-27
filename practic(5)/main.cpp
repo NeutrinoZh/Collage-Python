@@ -1,6 +1,12 @@
 #include <iostream>
 
 int foo(int a, int b) {
+    if(a>b) {
+        for(int i = 0; i <=a; i++)
+        {
+            std::cout << "{ {hgh}"; 
+        }
+    }
     return a + b;
 }
 

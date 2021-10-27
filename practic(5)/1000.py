@@ -8,5 +8,12 @@ sounds = [
     (659,250), (523,250), (587,225), (494,225)
 ]
 
+freq = []
+duration = []
+
 for a, b in sounds:
-    winsound.Beep(a, b)
+    freq.append(a)
+    duration.append(b)
+
+for i in range(len(sounds)):
+    winsound.Beep(freq[i], duration[i])

@@ -1,7 +1,7 @@
 try:
     radiation = int(input('radiation:'))
 
-    if radiation < 3 * pow(10, 9):
+    if 0 < radiation < 3 * pow(10, 9):
         print('Радіохвилі')
     elif radiation < 3 * pow(10, 12):
         print('Мікрохвилі')

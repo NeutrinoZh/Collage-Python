@@ -1,23 +1,26 @@
 # OOP 4 (0,7)
 
 class Queue:
-    queue = []
+    queue = [None]*100
+    tail = 0
+    head = 0
 
-    def put(self, el):
-        self.queue.append(el)
+    def enqueue(self, el):
+        self.queue[self.tail] = el
+        self.tail += 1
 
-    def get(self):
-        temp = self.queue[0]
-        del self.queue[0]
-        return temp
+    def dequeue(self):
+        x = self.queue[self.head]
+        self.head += 1
+        return x
 
 
 q = Queue()
 
-q.put('eat')
-q.put('sleep')
-q.put('code')
+q.enqueue('eat')
+q.enqueue('sleep')
+q.enqueue('code')
 
-print(q.get()) # 'eat'
-print(q.get()) # 'sleep'
-print(q.get()) # 'code'
+print(q.dequeue()) # 'eat'
+print(q.dequeue()) # 'sleep'
+print(q.dequeue()) # 'code'

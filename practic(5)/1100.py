@@ -14,15 +14,20 @@ except Exception as e:
 
 class Stack:
     stack = []
+    top = 0
 
     def push(self, el):
-        self.stack.append(el)
+        self.top += 1
+        self.stack[self.top] = el
 
     def pop(self):
-        return self.stack.pop()
+        if self.top <= 0:
+            raise "ERROR"
+        self.top -= 1
+        return self.stack[self.top]
 
     def empty(self):
-        return len(self.stack) == 0
+        return self.top
 
 stack = Stack()
 
