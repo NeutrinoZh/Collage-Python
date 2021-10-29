@@ -6,15 +6,17 @@
 from person import *
 
 class Course:
-    id = ''
-    title = ''
-    credit = 0
-    teachers = []
+    def __init__(self):
+        self.id = ''
+        self.title = ''
+        self.credit = 0
+        self.teachers = []
 
 class Department:
-    title = ''
-    teachers = []
-    courses = []
+    def __init__(self):
+        self.title = ''
+        self.teachers = []
+        self.courses = []
 
 departament = Department()
 departament.title = '...'

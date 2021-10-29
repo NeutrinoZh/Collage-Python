@@ -1,9 +1,5 @@
 
 class Person:
-    first_name = ''
-    second_name = ''
-    age = 0
-    
     def __init__(self, first_name, second_name, age):
         self.first_name = first_name
         self.second_name = second_name
@@ -13,13 +9,11 @@ class Person:
         return f'Привіт, мене звати {self.first_name} {self.second_name}'
 
 class Teacher(Person):
-    courses = []
+    def __init__(self, first_name, second_name, age):
+        super().__init__(first_name, second_name, age)
+        self.courses = []
 
 class Student(Person):
-    school = ''
-    yearEntry = 0
-    gpa = 0
-
     def __init__(self, first_name, second_name, age, school, yearEntry, gpa, department):
         super().__init__(first_name, second_name, age)
         self.school = school
