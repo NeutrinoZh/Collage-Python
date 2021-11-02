@@ -31,11 +31,12 @@ class Stack:
 
 stack = Stack()
 
+num = 0
 for ch in text:
-    if ch == '{':
-        stack.push(ch)
-    elif ch == '}':
-        stack.pop()
+    if ch == '{': num += 1
+    elif ch == '}': 
+        if num == 0: raise 'Error'
+        else: num -= 1
 
 if stack.empty():
     print('Сorrect code')
