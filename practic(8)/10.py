@@ -3,6 +3,7 @@ from random import randint
 
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 650
+OFFSET = 50
 
 def loop(func): 
     root = Tk()
@@ -16,7 +17,7 @@ def loop(func):
         c.delete("all")
 
         RADIUS = 7
-        points = [(randint(50, 750), randint(50, 550)) for i in range(50)]
+        points = [(randint(OFFSET, WINDOW_WIDTH-OFFSET), randint(OFFSET, WINDOW_HEIGHT-OFFSET-50)) for i in range(50)]
         
         for point in points:
             c.create_oval(point[0], point[1], point[0] + RADIUS, point[1] + RADIUS, fill='black')
