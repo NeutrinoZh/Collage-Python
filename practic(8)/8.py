@@ -15,10 +15,9 @@ task = None
 _cache_ = {}
 
 try:
-    file = open("_cache_.json", "r")
-    _cache_ = json.load(file)
-    file.close()
-except:
+    with open("_cache_.json", "r") as file:
+        _cache_ = json.load(file)
+except FileNotFoundError:
     pass
 
 def loop(func):

@@ -1,3 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 8 (0,5)
 
 class Playlist:
@@ -23,7 +51,7 @@ class Playlist:
         return len(self.tracks)
     
     def clear(self):
-        self.clear()
+        self.tracks.clear()
 
     def duration(self):
         result = 0
@@ -39,9 +67,9 @@ class Playlist:
 
 playlist = Playlist()
 
-playlist.add(Playlist.Track('Fly Away', 'TheFatRat, Anjulie', 'Single', '248'))
-playlist.add(Playlist.Track('Chroline', 'Twenty One Pilots', 'Trench', '324'))
-playlist.add(Playlist.Track('Rise Up', 'TheFatRat', 'Single', '209'))
+playlist.add(Playlist.Track('Fly Away', 'TheFatRat, Anjulie', 'Single', '248')) \
+        .add(Playlist.Track('Chroline', 'Twenty One Pilots', 'Trench', '324')) \
+        .add(Playlist.Track('Rise Up', 'TheFatRat', 'Single', '209'))
 
 print(playlist)
 playlist.remove('Chroline')

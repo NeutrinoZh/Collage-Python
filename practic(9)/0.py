@@ -36,6 +36,7 @@ def native_mult(x, y):
                     result[i + j] += x[i] * y[j]
 
             return list(filter(lambda v: v != None, result))
+
         def finalize(a):
             while True:
                 one = True
@@ -50,8 +51,10 @@ def native_mult(x, y):
                     break
 
             return result
+
         def deleteZeros(a):
             return list(filter(lambda i, c=count(0, 1): next(c) >= num_zeros, a))
+            
         def to_str(a):
             a = [str(i) for i in a]
             return ''.join(a)
