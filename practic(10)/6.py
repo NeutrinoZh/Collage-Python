@@ -6,7 +6,7 @@ WIDTH = 200
 
 def main(func): 
     root = Tk()
-    root.title('TSP')
+    root.title('Text Justification Problem')
     root.resizable(width=False, height=False)
     root.geometry('300x620')
     c = Canvas(root, width=WIDTH, height=500, bg='white')
